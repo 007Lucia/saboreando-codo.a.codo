@@ -1,0 +1,185 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+  }
+  body {
+    width: 100%;
+    height: auto;
+    background-color: rgb(84, 216, 84);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  header {
+    width: 95%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(255, 234, 209);
+  }
+  main{
+    width: 95%;
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+  }
+  .banner {
+    width: 100%;
+    height: 17rem;
+    padding-top: 1rem;
+  }
+  .boton-contacto {
+    position: absolute;
+    right: 4%;
+    top: 1rem;
+    font-size: 1.2rem;
+    color: black;
+  }
+  .titulo-principal {
+    align-items: center;
+    position: absolute;
+    font-size: 7rem;
+    font-family: 'Merienda', cursive;
+    color: green;
+    padding-top: 6rem;
+    filter: drop-shadow(0px 0px 7px #90E571);
+  
+  }
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    
+    
+  }
+ .lista-ingrdientes{
+    list-style-type:circle ;
+    line-height: 1.3rem;
+ }
+  .nav {
+    padding: .5rem 2.6rem;
+    margin: .8rem .5rem;
+    list-style: none;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    background-color: #bfff00 ;
+    font-family: 'Merienda', cursive;
+    font-weight: 400;
+    
+  }
+  
+  .nav:hover{
+    background: #90E571;
+  }
+  nav ul li a{
+    color: rgb(71, 10, 71);
+  }
+  
+  .recetas {
+    width: 95%;
+    background: burlywood;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem .5rem;
+  }
+  .recetas h1, .recetas h2, .ingredientes h3, .procedimiento h3{
+      font-family: 'Merienda', cursive;
+      text-align: center;
+
+  }
+
+  .recetas h1{
+    padding-bottom: 1rem;
+  }
+  .card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(205, 240, 129);
+    border-radius: 20px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  .imagen-contain{
+    width: 38%;
+  }
+
+  .imagen-receta{
+    width: 100%;
+    padding: .5rem;
+  }
+  .ingredientes{
+    width: 20%;
+    padding: .5rem;
+  }
+
+.procedimiento{
+    width: 30%;
+    padding: .5rem;
+}
+
+.procedimiento p{
+    line-height: 1.3rem;
+    text-align: justify;
+}
+  /* .container {
+    display: flex;
+    flex-direction: row;
+  } */
+  .boton-contacto{
+    margin-top: 1rem;
+    padding: .5rem;
+    background-color: rgb(250, 97, 41);
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+    font-family: 'Merienda', cursive;
+  }
+  
+  .boton-contacto:hover{
+    background-color: orange;
+  
+  }
+
+  footer{
+    width: 100%;
+    height: 4%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem 2rem;
+    justify-content: space-between;
+  }
+
+  .redes{
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+    justify-content: space-around;
+  }
+  .fa-facebook, .fa-twitter, .fa-instagram{
+    color: rgb(71, 10, 71);
+    font-size: 1.6rem;
+    background-color: #e6edd0;
+    border-radius: 30px;
+    padding: .5rem;
+  } 
+  .fa-facebook:hover, .fa-twitter:hover, .fa-instagram:hover{
+    color: rgb(71, 10, 71);
+ background-color: #90E571;
+  }
+
+  footer p{
+    color: rgb(71, 10, 71);
+    font-weight: 400;
+  }

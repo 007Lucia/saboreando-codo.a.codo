@@ -1,0 +1,228 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+body {
+  width: 100%;
+  height: auto;
+  background-color: rgb(84, 216, 84);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header {
+  width: 95%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(255, 234, 209);
+}
+main{
+  width: 95%;
+  background-color: bisque;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.banner {
+  width: 100%;
+  height: 17rem;
+  padding-top: 1rem;
+}
+.boton-contacto {
+  position: absolute;
+  right: 4%;
+  top: 1rem;
+  font-size: 1.2rem;
+  color: black;
+}
+.titulo-principal {
+  align-items: center;
+  position: absolute;
+  font-size: 7rem;
+  font-family: 'Merienda', cursive;
+  color: green;
+  padding-top: 6rem;
+  filter: drop-shadow(0px 0px 7px #90E571);
+
+}
+nav ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+li {
+  padding: .5rem 2.6rem;
+  margin: .8rem .5rem;
+  list-style: none;
+  font-size: 1.2rem;
+  border-radius: 30px;
+  background-color: #bfff00 ;
+  font-family: 'Merienda', cursive;
+  font-weight: 400;
+  
+}
+
+li:hover{
+  background: #90E571;
+}
+nav ul li a{
+  color: rgb(71, 10, 71);
+}
+
+
+
+.buscador {
+  width: 50%;
+  background: burlywood;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+.buscador h2, .recetas-dia h1, .card h3{
+    font-family: 'Merienda', cursive;
+}
+.imput {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 2rem;
+  
+}
+input {
+  padding: .8rem;
+  border-radius: 30px;
+  font-size: 1rem;
+}
+.fa-solid {
+  font-size: 1.5rem;
+  padding-left: 1rem;
+}
+
+.recetas-dia {
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2rem;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+}
+.card {
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  margin: 20px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+.card h3 {
+  font-size: 24px;
+  margin: 10px;
+}
+
+.card p {
+  font-size: 16px;
+  margin: 10px;
+}
+
+.boton {
+  display: block;
+  background-color: #bfff00;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+.card:hover .boton {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.boton-contacto{
+  margin-top: 1rem;
+  padding: .5rem;
+  background-color: rgb(250, 97, 41);
+  color: white;
+  font-weight: bold;
+  border-radius: 20px;
+  font-family: 'Merienda', cursive;
+}
+
+.boton-contacto:hover{
+  background-color: orange;
+
+}
+
+
+footer{
+  width: 100%;
+  height: 4%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1rem 2rem;
+  justify-content: space-between;
+}
+
+.redes{
+  display: flex;
+  flex-direction: row;
+  width: 30%;
+  justify-content: space-around;
+}
+.fa-facebook, .fa-twitter, .fa-instagram{
+  color: rgb(71, 10, 71);
+  font-size: 1.6rem;
+  background-color: #e6edd0;
+  border-radius: 30px;
+  padding: .5rem;
+} 
+.fa-facebook:hover, .fa-twitter:hover, .fa-instagram:hover{
+  color: rgb(71, 10, 71);
+background-color: #90E571;
+}
+
+footer p{
+  color: rgb(71, 10, 71);
+  font-weight: 400;
+}
