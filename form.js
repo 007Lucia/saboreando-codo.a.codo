@@ -1,66 +1,88 @@
-from flask import Flask, request, render_template
-import smtplib
-from email.mime.multipart import MIMEMultipart
-from email.mime.text import MIMEText
-from email.mime.image import MIMEImage
+const formulario = document.getElementById('formulario');
+const inputs = document.querySelectorAll('#formulario input');
 
-app = Flask(_name_)
+const expresiones = {
+	nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, 
+	correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+}
 
-@app.route('/')
-def index():
-    return render_template('index.html')
+const campos = {
+	nombre: false,
+	correo: false,
+}
 
-def enviar_correo(destinatario, asunto, mensaje, imagen):
-    remitente = 'saboreandocodoacodo@gmail.com'
-    contraseña = 'codoacodo2023'
-    
-    msg = MIMEMultipart()
-    msg['Subject'] = asunto
-    msg['From'] = remitente
-    msg['To'] = destinatario
-    
-    # Adjuntar mensaje de texto
-    texto = MIMEText(mensaje)
-    msg.attach(texto)
-    
-    # Adjuntar imagen
-    imagen_adjunta = MIMEImage(open(imagen, 'rb').read())
-    imagen_adjunta.add_header('Content-Disposition', 'attachment', filename='plato_sano.jpg')
-    msg.attach(imagen_adjunta)
+const validarFormulario = (e) => {
+	switch (e.target.name) {
+		case "nombre":
+			validarCampo(expresiones.nombre, e.target, 'nombre');
+		break;
+		case "correo":
+			validarCampo(expresiones.correo, e.target, 'correo');
+		break;
+	}
+}
 
-    with smtplib.SMTP_SSL('smtp.gmail.com', 465) as servidor_smtp:
-        servidor_smtp.login(remitente, contraseña)
-        servidor_smtp.send_message(msg)
+const validarCampo = (expresion, input, campo) => {
+	if(expresion.test(input.value)){
+		document.getElementById(`grupo__${campo}`).classList.remove('formulario__grupo-incorrecto');
+		document.getElementById(`grupo__${campo}`).classList.add('formulario__grupo-correcto');
+		document.querySelector(`#grupo__${campo} i`).classList.add('fa-check-circle');
+		document.querySelector(`#grupo__${campo} i`).classList.remove('fa-times-circle');
+		document.querySelector(`#grupo__${campo} .formulario__input-error`).classList.remove('formulario__input-error-activo');
+		campos[campo] = true;
+	} else {
+		document.getElementById(`grupo__${campo}`).classList.add('formulario__grupo-incorrecto');
+		document.getElementById(`grupo__${campo}`).classList.remove('formulario__grupo-correcto');
+		document.querySelector(`#grupo__${campo} i`).classList.add('fa-times-circle');
+		document.querySelector(`#grupo__${campo} i`).classList.remove('fa-check-circle');
+		document.querySelector(`#grupo__${campo} .formulario__input-error`).classList.add('formulario__input-error-activo');
+		campos[campo] = false;
+	}
+}
 
-def enviar_correo_bienvenida(destinatario):
-    asunto = '¡Bienvenido a nuestro boletín de novedades!'
-    mensaje = '''
-    ¡Hola!
-    
-    Gracias por suscribirte a nuestro boletín de novedades. Estamos emocionados de tenerte a bordo y compartir contigo deliciosas recetas y consejos sobre comida saludable.
-    
-    En nuestra página web encontrarás una amplia variedad de platos nutritivos y sabrosos, que te ayudarán a mantener un estilo de vida saludable.
-    
-    Adjunto a este correo, te enviamos una imagen inspiradora de uno de nuestros platos saludables para que te animes a probarlo.
-    
-    Si tienes alguna pregunta o necesitas asistencia, no dudes en contactarnos. ¡Estamos aquí para ayudarte!
-    
-    ¡Esperamos que disfrutes de nuestros correos y que encuentres la inspiración que necesitas para llevar una vida sana y equilibrada!
-    
-    Saludos,
-    El equipo de Comida Saludable
-    '''
-    imagen = 'ruta/a/tu/imagen/plato_sano.jpg'
-    
-    enviar_correo(destinatario, asunto, mensaje, imagen)
+const validarPassword2 = () => {
+	const inputPassword1 = document.getElementById('password');
+	const inputPassword2 = document.getElementById('password2');
 
-@app.route('/suscribir', methods=['POST'])
-def suscribir():
-    email = request.form['email']
-    
-    enviar_correo_bienvenida(email)
-    
-    return '¡Gracias por suscribirte! Se ha enviado un correo de bienvenida a tu dirección.'
+	if(inputPassword1.value !== inputPassword2.value){
+		document.getElementById(`grupo__password2`).classList.add('formulario__grupo-incorrecto');
+		document.getElementById(`grupo__password2`).classList.remove('formulario__grupo-correcto');
+		document.querySelector(`#grupo__password2 i`).classList.add('fa-times-circle');
+		document.querySelector(`#grupo__password2 i`).classList.remove('fa-check-circle');
+		document.querySelector(`#grupo__password2 .formulario__input-error`).classList.add('formulario__input-error-activo');
+		campos['password'] = false;
+	} else {
+		document.getElementById(`grupo__password2`).classList.remove('formulario__grupo-incorrecto');
+		document.getElementById(`grupo__password2`).classList.add('formulario__grupo-correcto');
+		document.querySelector(`#grupo__password2 i`).classList.remove('fa-times-circle');
+		document.querySelector(`#grupo__password2 i`).classList.add('fa-check-circle');
+		document.querySelector(`#grupo__password2 .formulario__input-error`).classList.remove('formulario__input-error-activo');
+		campos['password'] = true;
+	}
+}
 
-if _name_ == '_main_':
-    app.run()
+inputs.forEach((input) => {
+	input.addEventListener('keyup', validarFormulario);
+	input.addEventListener('blur', validarFormulario);
+});
+
+formulario.addEventListener('submit', (e) => {
+	e.preventDefault();
+
+	const terminos = document.getElementById('terminos');
+	if(campos.usuario && campos.nombre && campos.password && campos.correo && campos.telefono && terminos.checked ){
+		formulario.reset();
+
+		document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo');
+		setTimeout(() => {
+			document.getElementById('formulario__mensaje-exito').classList.remove('formulario__mensaje-exito-activo');
+		}, 5000);
+
+		document.querySelectorAll('.formulario__grupo-correcto').forEach((icono) => {
+			icono.classList.remove('formulario__grupo-correcto');
+		});
+	} else {
+		document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
+	}
+});
+
