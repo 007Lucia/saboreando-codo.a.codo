@@ -91,6 +91,7 @@
     justify-content: center;
     align-items: center;
     padding: 2rem .5rem;
+    margin-bottom: 1rem;
   }
   .recetas h1, .recetas h2, .ingredientes h3, .procedimiento h3{
       font-family: 'Merienda', cursive;
@@ -186,6 +187,7 @@
 
 
   .formulario {
+    width: 75%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
@@ -196,6 +198,7 @@
     font-weight: 700;
     padding: 10px;
     cursor: pointer;
+    
   }
   
   .formulario__grupo-input {
@@ -214,7 +217,7 @@
   }
   
   .formulario__input:focus {
-    border: 3px solid #0075FF;
+    border: 3px solid #00ff33;
     outline: none;
     box-shadow: 3px 0px 30px rgba(163,163,163, 0.4);
   }
@@ -251,10 +254,11 @@
   .formulario__mensaje {
     height: 45px;
     line-height: 45px;
-    background: #F66060;
+    background: #e13a3a;
     padding: 0 15px;
     border-radius: 3px;
     display: none;
+    width: 70%;
   }
   
   .formulario__mensaje-activo {
@@ -274,9 +278,9 @@
   .formulario__btn {
     height: 45px;
     line-height: 45px;
-    width: 30%;
-    background: #000;
-    color: #fff;
+    width: 20%;
+    background: #bfff00;
+    color: rgb(71, 10, 71);
     font-weight: bold;
     border: none;
     border-radius: 3px;
@@ -289,7 +293,7 @@
   }
   
   .formulario__mensaje-exito {
-    font-size: 14px;
+    font-size: 18px;
     color: #119200;
     display: none;
   }

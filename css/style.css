@@ -87,7 +87,7 @@ nav ul li a{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+  padding: 1rem;
 }
 .buscador h2, .recetas-dia h1, .card h3{
     font-family: 'Merienda', cursive;
@@ -230,7 +230,7 @@ footer p{
 #slideshow {
 	margin: 0 auto;
 	padding-top: 50px;
-	height: 600px;
+	height: 300px;
 	width: 100%;
 	box-sizing: border-box;
 }
@@ -272,7 +272,7 @@ footer p{
 	width: 190px;
 	perspective: 1000px;
 	position: relative;
-	padding-top: 80px;
+
 }
 
 .content-carrousel {
