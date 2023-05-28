@@ -1,340 +1,359 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-  }
-  body {
-    width: 100%;
-    height: auto;
-    background-color: rgb(84, 216, 84);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  header {
-    width: 95%;
-    height: 20%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    background-color: rgb(255, 234, 209);
-  }
-  main{
-    width: 95%;
-    background-color: bisque;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  
-  }
-  .banner {
-    width: 100%;
-    height: 17rem;
-    padding-top: 1rem;
-  }
-  .boton-contacto {
-    position: absolute;
-    right: 4%;
-    top: 1rem;
-    font-size: 1.2rem;
-    color: black;
-  }
-  .titulo-principal {
-    align-items: center;
-    position: absolute;
-    font-size: 7rem;
-    font-family: 'Merienda', cursive;
-    color: green;
-    padding-top: 6rem;
-    filter: drop-shadow(0px 0px 7px #90E571);
-  
-  }
-  nav ul {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    
-    
-  }
- .lista-ingrdientes{
-    list-style-type:circle ;
-    line-height: 1.3rem;
- }
-  .nav {
-    padding: .5rem 2.6rem;
-    margin: .8rem .5rem;
-    list-style: none;
-    font-size: 1.2rem;
-    border-radius: 30px;
-    background-color: #bfff00 ;
-    font-family: 'Merienda', cursive;
-    font-weight: 400;
-    
-  }
-  
-  .nav:hover{
-    background: #90E571;
-  }
-  nav ul li a{
-    color: rgb(71, 10, 71);
-  }
-  
-  .recetas {
-    width: 95%;
-    background: burlywood;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem .5rem;
-    margin-bottom: 1rem;
-  }
-  .recetas h1, .recetas h2, .ingredientes h3, .procedimiento h3{
-      font-family: 'Merienda', cursive;
-      text-align: center;
-
-  }
-
-  .recetas h1{
-    padding-bottom: 1rem;
-  }
-  .card{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background-color: rgb(205, 240, 129);
-    border-radius: 20px;
-    padding: 1rem;
-    margin-bottom: 1rem;
-  }
-  .imagen-contain{
-    width: 38%;
-  }
-
-  .imagen-receta{
-    width: 100%;
-    padding: .5rem;
-  }
-  .ingredientes{
-    width: 20%;
-    padding: .5rem;
-  }
-
-.procedimiento{
-    width: 30%;
-    padding: .5rem;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+body {
+  width: 100%;
+  height: auto;
+  background-color: rgb(84, 216, 84);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header {
+  width: 95%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(255, 234, 209);
+}
+main {
+  width: 95%;
+  background-color: bisque;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.banner {
+  width: 100%;
+  height: 17rem;
+  padding-top: 1rem;
+}
+.boton-contacto {
+  position: absolute;
+  right: 4%;
+  top: 1rem;
+  font-size: 1.2rem;
+  color: black;
+}
+.titulo-principal {
+  align-items: center;
+  position: absolute;
+  font-size: 7rem;
+  font-family: "Merienda", cursive;
+  color: green;
+  padding-top: 6rem;
+  filter: drop-shadow(0px 0px 7px #90e571);
+}
+nav ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
-.procedimiento p{
-    line-height: 1.3rem;
-    text-align: justify;
+
+.lista-ingrdientes {
+  list-style-type: circle;
+  line-height: 1.3rem;
 }
-  /* .container {
+.nav {
+  padding: 0.5rem 2.6rem;
+  margin: 0.8rem 0.5rem;
+  list-style: none;
+  font-size: 1.2rem;
+  border-radius: 30px;
+  background-color: #bfff00;
+  font-family: "Merienda", cursive;
+  font-weight: 400;
+}
+
+.nav:hover {
+  background: #90e571;
+}
+nav ul li a {
+  color: rgb(71, 10, 71);
+}
+
+.recetas {
+  width: 95%;
+  background: burlywood;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0.5rem;
+  margin-bottom: 1rem;
+}
+.recetas h1,
+.recetas h2,
+.ingredientes h3,
+.procedimiento h3 {
+  font-family: "Merienda", cursive;
+  text-align: center;
+}
+
+.recetas h1 {
+  padding-bottom: 1rem;
+}
+.card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgb(205, 240, 129);
+  border-radius: 20px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+.imagen-contain {
+  width: 38%;
+}
+
+.imagen-receta {
+  width: 100%;
+  padding: 0.5rem;
+}
+.ingredientes {
+  width: 20%;
+  padding: 0.5rem;
+}
+
+.procedimiento {
+  width: 30%;
+  padding: 0.5rem;
+}
+
+.procedimiento p {
+  line-height: 1.3rem;
+  text-align: justify;
+}
+/* .container {
     display: flex;
     flex-direction: row;
   } */
-  .boton-contacto{
-    margin-top: 1rem;
-    padding: .5rem;
-    background-color: rgb(250, 97, 41);
-    color: white;
-    font-weight: bold;
-    border-radius: 20px;
-    font-family: 'Merienda', cursive;
-  }
-  
-  .boton-contacto:hover{
-    background-color: orange;
-  
-  }
+.boton-contacto {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  background-color: rgb(250, 97, 41);
+  color: white;
+  font-weight: bold;
+  border-radius: 20px;
+  font-family: "Merienda", cursive;
+}
 
-  footer{
-    width: 100%;
-    height: 4%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 1rem 2rem;
-    justify-content: space-between;
-  }
+.boton-contacto:hover {
+  background-color: orange;
+}
 
-  .redes{
-    display: flex;
-    flex-direction: row;
-    width: 30%;
-    justify-content: space-around;
-  }
-  .fa-facebook, .fa-twitter, .fa-instagram{
-    color: rgb(71, 10, 71);
-    font-size: 1.6rem;
-    background-color: #e6edd0;
-    border-radius: 30px;
-    padding: .5rem;
-  } 
-  .fa-facebook:hover, .fa-twitter:hover, .fa-instagram:hover{
-    color: rgb(71, 10, 71);
- background-color: #90E571;
-  }
+footer {
+  width: 100%;
+  height: 4%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1rem 2rem;
+  justify-content: space-between;
+}
 
-  footer p{
-    color: rgb(71, 10, 71);
-    font-weight: 400;
-  }
+.redes {
+  display: flex;
+  flex-direction: row;
+  width: 30%;
+  justify-content: space-around;
+}
+.fa-facebook,
+.fa-twitter,
+.fa-instagram {
+  color: rgb(71, 10, 71);
+  font-size: 1.6rem;
+  background-color: #e6edd0;
+  border-radius: 30px;
+  padding: 0.5rem;
+  margin: 0.5rem;
+}
+.fa-facebook:hover,
+.fa-twitter:hover,
+.fa-instagram:hover {
+  color: rgb(71, 10, 71);
+  background-color: #90e571;
+}
 
+footer p {
+  color: rgb(71, 10, 71);
+  font-weight: 400;
+}
 
+form#myForm {
+  background: #64665d;
+  width: 45%;
+  border-radius: 20px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 2px solid black;
+}
+
+form#myForm label {
+  display: flex;
+  font-family: "Merienda", cursive;
+  flex-direction: column;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+form#myForm input , textarea{
+  padding: .2rem .5rem;
+  margin-top: .5rem;
+  border-radius: 10px;
+  border: #e6edd0;
+  height: 2.5rem;
+}
+
+.botonEnviar{
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 70%;
+  background: #6ee642;
+  border: none;
+  border-radius: 10px;
+  margin-top: 1rem;
+  padding: .5rem;
+  font-family: "Merienda", cursive;
+}
+.botonEnviar:hover{
+  font-weight: bold;
+  background: #47ec0b;
+  box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.53);
+-webkit-box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.53);
+-moz-box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.53);
+}
+
+/* ----- -----  Mediaqueries ----- ----- */
+@media screen and (max-width: 800px) {
   .formulario {
-    width: 75%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    grid-template-columns: 1fr;
   }
-  
-  .formulario__label {
-    display: block;
-    font-weight: 700;
-    padding: 10px;
-    cursor: pointer;
-    
-  }
-  
-  .formulario__grupo-input {
-    position: relative;
-  }
-  
-  .formulario__input {
-    width: 100%;
-    background: #fff;
-    border: 3px solid transparent;
-    border-radius: 3px;
-    height: 45px;
-    line-height: 45px;
-    padding: 0 40px 0 10px;
-    transition: .3s ease all;
-  }
-  
-  .formulario__input:focus {
-    border: 3px solid #00ff33;
-    outline: none;
-    box-shadow: 3px 0px 30px rgba(163,163,163, 0.4);
-  }
-  
-  .formulario__input-error {
-    font-size: 12px;
-    margin-bottom: 0;
-    display: none;
-  }
-  
-  .formulario__input-error-activo {
-    display: block;
-  }
-  
-  .formulario__validacion-estado {
-    position: absolute;
-    right: 10px;
-    bottom: 15px;
-    z-index: 100;
-    font-size: 16px;
-    opacity: 0;
-  }
-  
-  .formulario__checkbox {
-    margin-right: 10px;
-  }
-  
-  .formulario__grupo-terminos, 
+
+  .formulario__grupo-terminos,
   .formulario__mensaje,
   .formulario__grupo-btn-enviar {
-    grid-column: span 2;
+    grid-column: 1;
   }
-  
-  .formulario__mensaje {
-    height: 45px;
-    line-height: 45px;
-    background: #e13a3a;
-    padding: 0 15px;
-    border-radius: 3px;
-    display: none;
-    width: 70%;
+
+  .formulario__btn {
+    width: 100%;
   }
-  
-  .formulario__mensaje-activo {
-    display: block;
+}
+
+/* Estilos para pantallas más pequeñas */
+
+@media screen and (max-width: 1024px) {
+  header {
+    height: 25%;
   }
-  
-  .formulario__mensaje p {
-    margin: 0;
+
+  .titulo-principal {
+    font-size: 5rem;
+    padding-top: 4rem;
   }
-  
-  .formulario__grupo-btn-enviar {
-    display: flex;
+
+  .nav {
+    padding: 0.5rem 1.2rem;
+    margin: 0.5rem 0.2rem;
+    font-size: 1rem;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    height: 30%;
+  }
+
+  .titulo-principal {
+    font-size: 4rem;
+    padding-top: 3rem;
+  }
+
+  .nav {
+    padding: 0.4rem 0.8rem;
+    margin: 0.3rem 0.2rem;
+    font-size: 0.9rem;
+  }
+  .recetas h1{
+    font-size: 1.5rem;
+  }
+  .card {
     flex-direction: column;
     align-items: center;
   }
-  
-  .formulario__btn {
-    height: 45px;
-    line-height: 45px;
-    width: 20%;
-    background: #bfff00;
-    color: rgb(71, 10, 71);
-    font-weight: bold;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-    transition: .1s ease all;
+
+  .imagen-contain {
+    width: 80%;
   }
-  
-  .formulario__btn:hover {
-    box-shadow: 3px 0px 30px rgba(163,163,163, 1);
+  .ingredientes, .procedimiento{
+    width: 95%;
   }
-  
-  .formulario__mensaje-exito {
-    font-size: 18px;
-    color: #119200;
-    display: none;
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
   }
-  
-  .formulario__mensaje-exito-activo {
-    display: block;
+
+  .redes {
+    width: 100%;
+    margin-top: 1rem;
+    justify-content: center;
   }
-  
-  /* ----- -----  Estilos para Validacion ----- ----- */
-  .formulario__grupo-correcto .formulario__validacion-estado {
-    color: #1ed12d;
-    opacity: 1;
+
+  footer p {
+    margin-top: 1rem;
+    text-align: center;
   }
-  
-  .formulario__grupo-incorrecto .formulario__label {
-    color: #bb2929;
+}
+
+@media screen and (max-width: 480px) {
+  header {
+    height: 40%;
   }
-  
-  .formulario__grupo-incorrecto .formulario__validacion-estado {
-    color: #bb2929;
-    opacity: 1;
+
+  .titulo-principal {
+    font-size: 3rem;
+    padding-top: 2rem;
   }
-  
-  .formulario__grupo-incorrecto .formulario__input {
-    border: 3px solid #bb2929;
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
-  
-  
-  /* ----- -----  Mediaqueries ----- ----- */
-  @media screen and (max-width: 800px) {
-    .formulario {
-      grid-template-columns: 1fr;
-    }
-  
-    .formulario__grupo-terminos, 
-    .formulario__mensaje,
-    .formulario__grupo-btn-enviar {
-      grid-column: 1;
-    }
-  
-    .formulario__btn {
-      width: 100%;
-    }
+
+  .nav {
+    padding: 0.3rem 0.6rem;
+    margin: 0.2rem 0.1rem;
+    font-size: 0.8rem;
   }
+
+  .boton-contacto {
+    font-size: 14px;
+    padding: 0.3rem;
+  }
+  form#myForm{
+    width: 90%;
+  }
+
+
+  footer {
+    padding: 0.5rem;
+  }
+}
